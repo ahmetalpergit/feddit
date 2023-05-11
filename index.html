@@ -23,7 +23,7 @@
       <h1>Feddit - Reddit for Facts</h1>
     </header>
     <div class="share">
-      <form action="POST">
+      <form>
         <input type="text" placeholder="Share a fact with the world..." />
         <span>200</span>
         <input type="text" placeholder="Enter source for the fact" />
@@ -32,9 +32,10 @@
           <option value="Science">Science</option>
           <option value="Finance">Finance</option>
         </select>
-        <button class="postBtn" type="submit">Post</button>
+        <button class="btn">Post</button>
+        <button>Cancel</button>
       </form>
-      <button class="shareBtn">Share a fact</button>
+      <button class="shareBtn btn">Share a fact</button>
     </div>
     <main>
       <aside>
@@ -45,7 +46,7 @@
           <li><button>Finance</button></li>
         </ul>
       </aside>
-      <section class="container">
+      <section class="facts">
         <ul>
           <li class="fact">
             <p>
@@ -53,7 +54,7 @@
               <a target="_blank" href="https://opensource.fb.com/">(source)</a>
               <span class="tag">#technology</span>
             </p>
-            <div>
+            <div class="votes">
               <button>👍 24</button>
               <button>😮 9</button>
               <button>⛔ 4</button>
@@ -71,7 +72,7 @@
               >
               <span class="tag">#society</span>
             </p>
-            <div>
+            <div class="votes">
               <button>👍 11</button>
               <button>😮 2</button>
               <button>⛔ 0</button>
@@ -85,7 +86,7 @@
               >
               <span class="tag">#society</span>
             </p>
-            <div>
+            <div class="votes">
               <button>👍 5</button>
               <button>😮 2</button>
               <button>⛔ 1</button>
