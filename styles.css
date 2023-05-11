@@ -15,6 +15,14 @@
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  background: var(--color-orange);
+}
+
+::selection {
+  background: var(--color-orange);
+}
+
 a {
   color: var(--color-orange);
 }
