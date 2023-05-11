@@ -1,18 +1,103 @@
-html {
-  font-family: sans-serif;
+:root {
+  --font-display: 'Rampart One', cursive;
+  --font-main: 'Cairo', sans-serif;
+  --color-black: #111;
+  --color-gray: #333;
+  --color-white: #fefefe;
+  --color-orange: rgb(255, 117, 67);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-orange);
+}
+
+html,
+input,
+select,
+option,
+button {
+  font-family: var(--font-main);
+}
+
+body {
+  padding: 16px;
+}
+
+button {
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid var(--color-black);
+  color: var(--color-black);
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+button:active {
+  background-color: var(--color-gray);
+  border: 2px solid var(--color-gray);
 }
 
 h1 {
-  font-size: 42px;
-  text-align: center;
+  font-size: 36px;
+  line-height: 1;
   text-transform: uppercase;
-}
-
-p {
-  font-size: 20px;
-  line-height: 1.4;
+  font-family: var(--font-display);
+  margin-bottom: 24px;
 }
 
 ul {
   list-style: none;
+}
+
+form {
+  margin: 16px 0;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  margin-right: 16px;
+}
+
+.container {
+  flex: 1;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.categories button {
+  width: 100%;
+}
+
+.fact {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.4;
+  border: 2px solid var(--color-black);
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.tag {
+  font-weight: 700;
+  font-size: 13px;
 }
