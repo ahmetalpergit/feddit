@@ -22,18 +22,20 @@
     <header>
       <h1>Feddit - Reddit for Facts</h1>
     </header>
-    <button>Share a fact</button>
-    <form action="POST">
-      <input type="text" placeholder="Share a fact with the world..." />
-      <span>200</span>
-      <input type="text" placeholder="Enter source for the fact" />
-      <select name="" id="">
-        <option value="Technology">Technology</option>
-        <option value="Science">Science</option>
-        <option value="Finance">Finance</option>
-      </select>
-      <button type="submit">Post</button>
-    </form>
+    <div class="share">
+      <form action="POST">
+        <input type="text" placeholder="Share a fact with the world..." />
+        <span>200</span>
+        <input type="text" placeholder="Enter source for the fact" />
+        <select name="" id="">
+          <option value="Technology">Technology</option>
+          <option value="Science">Science</option>
+          <option value="Finance">Finance</option>
+        </select>
+        <button class="postBtn" type="submit">Post</button>
+      </form>
+      <button class="shareBtn">Share a fact</button>
+    </div>
     <main>
       <aside>
         <ul class="categories">
@@ -92,5 +94,6 @@
         </ul>
       </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>

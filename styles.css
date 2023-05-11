@@ -61,8 +61,27 @@ ul {
   list-style: none;
 }
 
+/*Elements*/
+
+.share {
+  display: flex;
+  align-items: center;
+  margin: 16px 0 16px 102px;
+}
+
 form {
-  margin: 16px 0;
+  display: none;
+  gap: 8px;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+form.visible {
+  display: flex;
+}
+
+.postBtn {
+  margin-right: 8px;
 }
 
 main {
@@ -89,6 +108,7 @@ aside {
 
 .fact {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-size: 16px;
   line-height: 1.4;
@@ -98,6 +118,11 @@ aside {
 }
 
 .tag {
+  display: inline-block;
   font-weight: 700;
   font-size: 13px;
+  background-color: var(--color-black);
+  padding: 4px 6px;
+  color: var(--color-white);
+  line-height: 1;
 }
