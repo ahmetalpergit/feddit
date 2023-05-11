@@ -1,0 +1,18 @@
+html {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
