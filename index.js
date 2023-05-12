@@ -3,7 +3,6 @@ const formContainer = document.querySelector('form');
 
 shareBtn.addEventListener('click', () => {
   shareBtn.classList.toggle('hidden');
-
   if (formContainer.classList.contains('visible')) {
     formContainer.classList.remove('visible');
   } else {

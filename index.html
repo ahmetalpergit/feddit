@@ -22,23 +22,10 @@
     <header>
       <h1>Feddit - Reddit for Facts</h1>
     </header>
-    <div class="share">
-      <form>
-        <input type="text" placeholder="Share a fact with the world..." />
-        <span>200</span>
-        <input type="text" placeholder="Enter source for the fact" />
-        <select name="" id="">
-          <option value="Technology">Technology</option>
-          <option value="Science">Science</option>
-          <option value="Finance">Finance</option>
-        </select>
-        <button class="btn">Post</button>
-        <button>Cancel</button>
-      </form>
-      <button class="shareBtn btn">Share a fact</button>
-    </div>
+
     <main>
       <aside>
+        <button class="shareBtn btn">Share a fact</button>
         <ul class="categories">
           <li><button>All</button></li>
           <li><button>Technology</button></li>
@@ -47,6 +34,24 @@
         </ul>
       </aside>
       <section class="facts">
+        <div class="share">
+          <form>
+            <input
+              class="factInput"
+              type="text"
+              placeholder="Share a fact with the world..."
+            />
+            <span>200</span>
+            <input type="text" placeholder="Enter source for the fact" />
+            <select name="" id="">
+              <option value="Technology">Technology</option>
+              <option value="Science">Science</option>
+              <option value="Finance">Finance</option>
+            </select>
+            <button class="btn">Post</button>
+            <button>Cancel</button>
+          </form>
+        </div>
         <ul>
           <li class="fact">
             <p>

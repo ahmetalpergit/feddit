@@ -80,13 +80,6 @@ ul {
 .share {
   display: flex;
   align-items: center;
-  margin: 16px 0 16px 102px;
-}
-
-@media (max-width: 675px) {
-  .share {
-    margin: 16px 0;
-  }
 }
 
 form {
@@ -98,6 +91,7 @@ form {
 
 form.visible {
   display: flex;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 675px) {
@@ -106,6 +100,10 @@ form.visible {
     align-items: stretch;
     width: 100%;
   }
+}
+
+.factInput {
+  flex: 1;
 }
 
 .hidden {
@@ -130,6 +128,11 @@ aside {
   }
 }
 
+.shareBtn {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
 .facts {
   flex: 1;
 }
@@ -139,6 +142,12 @@ aside {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 8px;
+}
+
+@media (max-width: 400px) {
+  .categories {
+    display: none;
+  }
 }
 
 .categories button {
