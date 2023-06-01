@@ -20,9 +20,6 @@ const ShareForm = () => {
                 {name}
               </option>
             ))}
-
-            <option value="Science">Science</option>
-            <option value="Finance">Finance</option>
           </select>
           <button className="btn post">Post</button>
           <button onClick={() => setIsSharingFact(false)}>Cancel</button>
