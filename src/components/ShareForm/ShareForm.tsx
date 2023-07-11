@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import { ALL_CATEGORIES } from '../../utils/constants';
 import { Fact } from '../../utils/types';
 import { ShareFormSchema } from './formSchema';
 
-const ShareForm = () => {
+type ShareFormProps = {
+  setFacts: Dispatch<SetStateAction<Fact[]>>;
+};
+
+const ShareForm = ({ setFacts }: ShareFormProps) => {
   const [isSharingFact, setIsSharingFact] = useState<boolean>(false);
   const [formValues, setFormValues] = useState<Fact>({
     text: '',
@@ -78,6 +82,7 @@ const ShareForm = () => {
                 createdAt: new Date(),
               };
               shareFactPostRequest(newFact);
+              setFacts((prevFacts) => [...prevFacts, newFact]);
               resetAllFields();
               setIsSharingFact(false);
             }

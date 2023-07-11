@@ -36,7 +36,7 @@ function App() {
           <Categories category={category} setCategory={setCategory} />
         </aside>
         <section className="facts">
-          <ShareForm />
+          <ShareForm setFacts={setFacts} />
           <Facts data={facts} />
         </section>
       </main>
