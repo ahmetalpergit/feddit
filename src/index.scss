@@ -118,6 +118,14 @@ form {
   flex: 1;
 }
 
+.error {
+  border: 1px solid red;
+
+  &::placeholder {
+    color: red;
+  }
+}
+
 .hidden {
   display: none;
 }

@@ -1,5 +1,6 @@
 export interface Fact {
-  id: number;
+  id?: number;
+  createdAt?: Date;
   text: string;
   source: string;
   category: string;
