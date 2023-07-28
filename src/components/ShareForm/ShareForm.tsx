@@ -2,6 +2,7 @@ import { useState, Dispatch, SetStateAction } from 'react';
 import { ALL_CATEGORIES } from '../../utils/constants';
 import { IFact } from '../../utils/types';
 import { ShareFormSchema } from './formSchema';
+import styles from './shareForm.module.scss';
 
 type ShareFormProps = {
   setFacts: Dispatch<SetStateAction<IFact[]>>;
@@ -62,6 +63,7 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
     <div className="share">
       {isSharingFact ? (
         <form
+          className={styles.form}
           onSubmit={(e) => {
             e.preventDefault();
             const shareFormValidationResult =
