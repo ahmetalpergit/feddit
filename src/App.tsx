@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import Categories from './components/Categories';
 import Header from './components/Header';
-import { Fact } from './utils/types';
+import { IFact } from './utils/types';
 import ShareForm from './components/ShareForm';
-import Facts from './components/Facts/Facts';
+import FactsList from './components/FactsList/FactsList';
 
 function App() {
-  const [facts, setFacts] = useState<Fact[]>([]);
+  const [facts, setFacts] = useState<IFact[]>([]);
   const [category, setCategory] = useState('');
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function App() {
         </aside>
         <section className="facts">
           <ShareForm setFacts={setFacts} />
-          <Facts data={facts} />
+          <FactsList data={facts} />
         </section>
       </main>
     </>

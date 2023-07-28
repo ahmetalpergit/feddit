@@ -1,4 +1,4 @@
-export interface Fact {
+export interface IFact {
   id?: number;
   createdAt?: Date;
   text: string;

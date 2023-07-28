@@ -1,15 +1,15 @@
 import { useState, Dispatch, SetStateAction } from 'react';
 import { ALL_CATEGORIES } from '../../utils/constants';
-import { Fact } from '../../utils/types';
+import { IFact } from '../../utils/types';
 import { ShareFormSchema } from './formSchema';
 
 type ShareFormProps = {
-  setFacts: Dispatch<SetStateAction<Fact[]>>;
+  setFacts: Dispatch<SetStateAction<IFact[]>>;
 };
 
 const ShareForm = ({ setFacts }: ShareFormProps) => {
   const [isSharingFact, setIsSharingFact] = useState<boolean>(false);
-  const [formValues, setFormValues] = useState<Fact>({
+  const [formValues, setFormValues] = useState<IFact>({
     text: '',
     source: '',
     category: '',
@@ -19,7 +19,7 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
       shocking: 0,
     },
   });
-  const [errors, setErrors] = useState<Partial<Fact>>({
+  const [errors, setErrors] = useState<Partial<IFact>>({
     text: '',
     source: '',
     category: '',
@@ -43,7 +43,7 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
     });
   };
 
-  const shareFactPostRequest = async (fact: Fact) => {
+  const shareFactPostRequest = async (fact: IFact) => {
     const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}`, {
       method: 'POST',
       headers: {
