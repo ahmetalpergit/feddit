@@ -60,7 +60,7 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
   };
 
   return (
-    <div className="share">
+    <div className={styles.share}>
       {isSharingFact ? (
         <form
           className={styles.form}
@@ -91,7 +91,9 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
           }}
         >
           <input
-            className={`factInput ${errors.text ? 'error' : ''}`}
+            className={`${styles.input} ${styles.factInput} ${
+              errors.text ? styles.error : ''
+            }`}
             type="text"
             placeholder={errors.text || 'Share a fact with the world ... (200)'}
             onChange={(e) => {
@@ -101,7 +103,9 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
             value={formValues.text}
           />
           <input
-            className={`factInput ${errors.source ? 'error' : ''}`}
+            className={`${styles.input} ${styles.factInput} ${
+              errors.source ? styles.error : ''
+            }`}
             type="text"
             placeholder={errors.source || 'Enter source for the fact'}
             onChange={(e) => {
@@ -111,7 +115,7 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
             value={formValues.source}
           />
           <select
-            className={errors.category ? 'error' : ''}
+            className={errors.category ? styles.error : ''}
             defaultValue={''}
             name=""
             id=""
@@ -129,11 +133,14 @@ const ShareForm = ({ setFacts }: ShareFormProps) => {
               </option>
             ))}
           </select>
-          <button className="btn post">Post</button>
+          <button className={`${styles.btn} ${styles.post}`}>Post</button>
           <button onClick={() => setIsSharingFact(false)}>Cancel</button>
         </form>
       ) : (
-        <button onClick={() => setIsSharingFact(true)} className="shareBtn btn">
+        <button
+          onClick={() => setIsSharingFact(true)}
+          className={`${styles.shareBtn} ${styles.btn}`}
+        >
           Share a fact
         </button>
       )}

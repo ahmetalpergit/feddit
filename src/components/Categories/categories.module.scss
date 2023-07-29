@@ -1,0 +1,15 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
+
+  button {
+    text-transform: capitalize;
+    width: 100%;
+  }
+}

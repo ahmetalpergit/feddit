@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
 import { ALL_CATEGORIES } from '../../utils/constants';
+import styles from './categories.module.scss';
 
 type CategoriesProps = {
   category: string;
@@ -8,7 +9,7 @@ type CategoriesProps = {
 
 const Categories = ({ category, setCategory }: CategoriesProps) => {
   return (
-    <ul className="categories">
+    <ul className={styles.categories}>
       <li onClick={() => setCategory('')}>
         <button className={!category ? 'selected' : ''}>all</button>
       </li>

@@ -7,7 +7,7 @@ type FactsListProps = {
 
 const FactsList = ({ data }: FactsListProps) => {
   return (
-    <ul className="factList">
+    <ul>
       {data.length ? (
         data.map((fact) => <Fact key={fact.id} fact={fact} />)
       ) : (

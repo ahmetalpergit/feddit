@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { IFact } from '../../utils/types';
+import styles from './fact.module.scss';
 
 type FactProps = {
   fact: IFact;
@@ -53,15 +54,15 @@ const Fact = ({ fact }: FactProps) => {
   }, [vote]);
 
   return (
-    <li className="fact" key={fact.id}>
+    <li className={styles.fact} key={fact.id}>
       <p>
         {fact.text}
         <a target="_blank" href={fact.source}>
           (source)
         </a>
-        <span className="tag">#{fact.category}</span>
+        <span className={styles.tag}>#{fact.category}</span>
       </p>
-      <div className="votes">
+      <div className={styles.votes}>
         <button
           className={vote === 'interesting' ? 'selected' : ''}
           onClick={() =>

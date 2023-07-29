@@ -1,3 +1,44 @@
+.share {
+  margin-bottom: 8px;
+}
+
 .form {
-  display: block;
+  display: flex;
+  gap: 8px;
+  max-width: 800px;
+  align-items: stretch;
+  transition: all 0.2s;
+
+  @media (max-width: 675px) {
+    &.visible {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+  }
+
+  .input {
+    padding: 4px;
+  }
+
+  .factInput {
+    flex: 1;
+  }
+
+  .error {
+    border: 1px solid red;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+}
+
+.btn {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+
+  &.post {
+    padding: 0 16px;
+  }
 }
